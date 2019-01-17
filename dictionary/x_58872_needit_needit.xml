@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="Requested For" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Requested Type" mandatory="true" max_length="40" name="u_requested_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Work place services" sequence="3" value="wps"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="hr1" label="What needed" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr1"/>
+                <element inactive_on_update="false" label="Human Resources 2" sequence="1" value="hr2"/>
+                <element inactive_on_update="false" label="legal 12" sequence="2" value="legal1"/>
+                <element inactive_on_update="false" label="legal 2" sequence="3" value="legal2"/>
+                <element inactive_on_update="false" label="wps 1" sequence="4" value="wps1"/>
+                <element inactive_on_update="false" label="wps2" sequence="5" value="wps2"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needeed" type="glide_date_time"/>
+    </element>
+</database>
